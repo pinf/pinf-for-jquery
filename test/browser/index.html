@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="mocha/mocha.css">
+    <script src="mocha/mocha.js" type="text/javascript" charset="utf-8"></script>
+    <script src="chai/chai.js" type="text/javascript" charset="utf-8"></script>
+    <script src="pinf-loader-js/loader.js" type="text/javascript" charset="utf-8"></script>
+    <script src="pinf-loader-js/workspace/www/q.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="pinf-for-jquery/pinf.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="mocha"></div>
+    <script type="text/javascript">
+        var ASSERT = chai.assert;
+        mocha.setup({
+            ui: "bdd",
+            ignoreLeaks: true
+        });
+    </script>
+    <script src="loader-bundles.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            mocha.run();
+        });
+    </script>
+</body>
+</html>
