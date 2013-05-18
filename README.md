@@ -16,7 +16,12 @@ Install
 Usage
 -----
 
-*TODO*
+    <script src="jquery.js"></script>
+    <script src="pinf.jquery.js"></script>
+    
+    $.pinf.sandbox("bundle.js", function(sandbox) {
+        sandbox.main();
+    });
 
 
 Test & Development
