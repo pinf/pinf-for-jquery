@@ -16,11 +16,24 @@ Install
 Usage
 -----
 
+`http://localhost/index.html`
+
     <script src="jquery.js"></script>
     <script src="pinf.jquery.js"></script>
-    
-    $.pinf.sandbox("bundle.js", function(sandbox) {
-        sandbox.main();
+    <script>
+        $.pinf.sandbox("bundle.js", function(sandbox) {
+            sandbox.main();
+        });
+    </script>
+
+`http://localhost/bundle.js`
+
+    PINF.bundle("", function(require) {
+        require.memoize("/main.js", function(require, exports, module) {
+            exports.main = function(options) {
+                console.log("HelloWorld!");
+            }
+        });
     });
 
 
