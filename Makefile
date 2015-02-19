@@ -1,8 +1,11 @@
 
 REPORTER ?= list
 
+install:
+	@$(MAKE) install-all
+
 install-all:
-	@if [ ! -d "node_modules" ]; then npm install; fi
+	@if [ ! -d "node_modules" ]; then npm install --unsafe-perm; fi
 
 test:
 	@$(MAKE) install-all
